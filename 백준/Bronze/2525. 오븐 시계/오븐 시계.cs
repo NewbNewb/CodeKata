@@ -10,16 +10,10 @@ public class Example
         int.TryParse(Console.ReadLine(), out int n3);
 
         n2 += n3;
+        n1 += n2 / 60;
+        n2 %= 60;
+        n1 %= 24;
 
-        while (n2 > 59)
-        {
-            n1++;
-            n2 -= 60;
-        }
-        if (n1 > 23)
-        {
-            n1 -= 24;
-        }
         Console.WriteLine(n1 + " " + n2);
     }
 }
