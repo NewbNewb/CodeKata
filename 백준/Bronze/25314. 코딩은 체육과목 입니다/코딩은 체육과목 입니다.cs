@@ -5,11 +5,12 @@ public class Example
     public static void Main()
     {
         int.TryParse(Console.ReadLine(), out int count);
+        string s = "";
 
         for (int i = 0; i < count / 4; i++)
         {
-            Console.Write("long ");
+            s += "long ";
         }
-        Console.Write("int");
+        Console.WriteLine($"{s}int");
     }
 }
