@@ -4,27 +4,16 @@ public class Example
 {
     public static void Main()
     {
-        int[] num = new int[10];
-        int vel = 1;
+        bool[] check = new bool[42];
+        int vel = 0;
 
-        for (int i = 0; i < num.Length; i++)
+        for (int i = 0; i < 10; i++)
         {
             int.TryParse(Console.ReadLine(), out int count);
-            num[i] = count % 42;
-        }
-
-        for (int i = 0; i < num.Length; i++)
-        {
-            for (int j = i + 1 ; j < num.Length; j++)
+            if (check[count % 42] == false)
             {
-                if (num[i] == num[j])
-                {
-                    break;
-                }
-                if (j == num.Length - 1)
-                {
-                    vel++;
-                }
+                check[count % 42] = true;
+                vel++;
             }
         }
         Console.WriteLine(vel);
